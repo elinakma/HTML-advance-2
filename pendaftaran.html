@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Halaman HTML Elin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Elin Akma">
+        <meta name="233307009" content="12345">
+    </head>
+    <style>
+        #content {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 600px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 600px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;  
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <header>
+            <h2>Website Elin</h2>
+        </header>
+
+        <section>
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar/gambar.jpg">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+            </ul>
+            </nav>
+        <article>
+            <div id="content">
+            <form method="post" action="proses.php">
+                <h1>Form Penjadwal Pertemuan</h1>
+                    <fieldset>
+                        <legend>Informasi Pribadi</legend>
+                        <br>
+                          <label for="nama"> Nama </label> 
+                          <input type="text" id="nama" name="nama" placeholder="Contoh : Elin Akma" required> <br>
+                          <br>
+              
+                          <label for="ph"> No. Telepone</label>
+                          <input type="tel" id="ph" name="phone" pattern="[0-9]{4}-[0-9]{6}" placeholder="Format: xxxx-xxxxxx" required><br>
+                          <br>
+              
+                          <label for="email">Alamat Email </label>
+                          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+                          placeholder="Contoh: nama@domain.com" required> <br>
+                          <br>
+              
+                          <label for="b">Tanggal Lahir </label>
+                          <input type="date" id="b" name="tanggal" min="1987-01-01" max="1993-01-01" required> <br>
+                          <br>
+                      </fieldset>
+                      </form>
+              
+                      <fieldset> 
+                          <legend>Permintaan Pertemuan</legend>
+                          <br>
+              
+                          <label for="tujuan"> Tujuan Pertemuan </label> 
+                          <input type="text" id="tujuan" name="tujuan" required> <br>
+                          <br>
+              
+                          <label for="vol"> Tingkat Kepentingan Pertemuan</label>
+                          <input type="range" id="vol" name="vol" min="0" max="10" value="5" required> <br>
+                          <br>
+              
+                          <label for="tanggal">Tanggal Pertemuan </label>
+                          <input type="date" id="tanggal" name="tanggal" min="?php echo date('Y-m-d'); ?>">
+                          <br>
+              
+                          <label for="appt">Select a time:</label>
+                          <input type="time" id="appt" name="appt" min="17:00" max="21:00" required> <br>
+                      </fieldset>
+            </div>
+            <p> </p>
+            </form>
+            <form method="post" action="proses.php">
+                <input type="submit" value="submit">
+            </form>
+        </article>
+        </section>
+
+        <footer>
+            <h3>hehe mari berbahagia kawanku</h3>
+            <p>copyright @elinakma_233307009</p>
+        </footer>
+    </body>
+</html>

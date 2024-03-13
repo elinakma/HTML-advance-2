@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Halaman HTML Elin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Elin Akma" />
+    <meta name="233307009" content="12345" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+
+    nav {
+      float: left;
+      width: 30%;
+      height: 500px;
+      background: #ccc;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: 300px;
+    }
+
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav,
+      article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <h2>Website Elin</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gambar/gambar.jpg">Gambar</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="svg.html">SVG</a></li>
+          <li><a href="canvas.html">Canvas</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>Gambar Pemandangan</h1>
+        <img src="gambar/gambar.jpg" alt="Hayo tebak" width="200px" height="150px" onclick="alert('aaa kasian aaaa')"/>
+        <img src="gambar/gambar1.jpg" alt="Hayo tebak" width="200px" height="150px" ondblclick="alert('lohhh?!?!')"/>
+        <img src="gambar/gambar2.jpg" alt="Hayo tebak" width="200px" height="150px" onmousedown="alert('iyaaa')"/>
+        <img src="gambar/gambar4.jpg" alt="Hayo tebak" width="200px" height="150px" onmousemove="alert('aku sayang kamu')"/>
+        <img src="gambar/gambar5.jpg" alt="Hayo tebak" width="200px" height="150px" onmouseout="alert('apaansih')"/>
+        <img src="gambar/gambar6.jpg" alt="Hayo tebak" width="200px" height="150px" onmouseover="alert('gajelas')"/>
+        <p>Kesimpulan dari website ini adalah kita mengatur mouse event yaitu pergerakan dan interaksi mouse.
+            ada atribut onclick, ondbbclick, onmousedown, onmousemove, onmouseout, onmouseover. Setiap atribut
+            tersebut memiliki fungsi yang berbeda saat menampilkan pesan yang terkait dengan pergerakan mouse.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <h3>hehe mari berbahagia kawanku</h3>
+      <p>copyright @elinakma_233307009</p>
+    </footer>
+  </body>
+</html>
