@@ -97,50 +97,46 @@
                     <fieldset>
                         <legend>Informasi Pribadi</legend>
                         <br>
-                          <label for="nama"> Nama </label> 
-                          <input type="text" id="nama" name="nama" placeholder="Contoh : Elin Akma" required> <br>
-                          <br>
+                        <label for="nama"> Nama </label> 
+                        <input type="text" id="nama" name="nama" placeholder="Contoh : Elin Akma" required> <br>
+                        <br>
               
-                          <label for="ph"> No. Telepone</label>
-                          <input type="tel" id="ph" name="phone" pattern="[0-9]{4}-[0-9]{6}" placeholder="Format: xxxx-xxxxxx" required><br>
-                          <br>
+                        <label for="ph"> No. Telepone</label>
+                        <input type="tel" id="ph" name="phone" pattern="[0-9]{4}-[0-9]{6}" placeholder="Format: xxxx-xxxxxx" required><br>
+                        <br>
               
-                          <label for="email">Alamat Email </label>
-                          <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
-                          placeholder="Contoh: nama@domain.com" required> <br>
-                          <br>
+                        <label for="email">Alamat Email </label>
+                        <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  required
+                        placeholder="Contoh: nama@domain.com" required> <br>
+                        <br>
               
-                          <label for="b">Tanggal Lahir </label>
-                          <input type="date" id="b" name="tanggal" min="1987-01-01" max="1993-01-01" required> <br>
-                          <br>
-                      </fieldset>
-                      </form>
+                        <label for="b">Tanggal Lahir </label>
+                        <input type="date" id="b" name="tanggal" min="1987-01-01" max="1993-01-01" required> <br>
+                        <br>
+                    </fieldset>
               
-                      <fieldset> 
-                          <legend>Permintaan Pertemuan</legend>
-                          <br>
+                    <fieldset> 
+                        <legend>Permintaan Pertemuan</legend>
+                        <br>
               
-                          <label for="tujuan"> Tujuan Pertemuan </label> 
-                          <input type="text" id="tujuan" name="tujuan" required> <br>
-                          <br>
+                        <label for="tujuan"> Tujuan Pertemuan </label> 
+                        <input type="text" id="tujuan" name="tujuan" required> <br>
+                        <br>
               
-                          <label for="vol"> Tingkat Kepentingan Pertemuan</label>
-                          <input type="range" id="vol" name="vol" min="0" max="10" value="5" required> <br>
-                          <br>
+                        <label for="vol"> Tingkat Kepentingan Pertemuan</label>
+                        <input type="range" id="vol" name="vol" min="0" max="10" value="5" required> <br>
+                        <br>
               
-                          <label for="tanggal">Tanggal Pertemuan </label>
-                          <input type="date" id="tanggal" name="tanggal" min="?php echo date('Y-m-d'); ?>">
-                          <br>
+                        <label for="tanggal">Tanggal Pertemuan </label>
+                        <input type="date" id="tanggal" name="tanggal" min="?php echo date('Y-m-d'); ?>">
+                        <br><br>
               
-                          <label for="appt">Select a time:</label>
-                          <input type="time" id="appt" name="appt" min="17:00" max="21:00" required> <br>
-                      </fieldset>
+                        <label for="appt">Select a time:</label>
+                        <input type="time" id="appt" name="appt" min="17 : 00" max="21 : 00" required> <br>
+                    </fieldset><br>
+                        <input type="submit" value="submit">
+            </form>
             </div>
-            <p> </p>
-            </form>
-            <form method="post" action="proses.php">
-                <input type="submit" value="submit">
-            </form>
         </article>
         </section>
 
@@ -149,4 +145,8 @@
             <p>copyright @elinakma_233307009</p>
         </footer>
     </body>
+    <!--Tanggal pertemuan-->
+    <script>
+        document.getElementById('tanggal').setAttribute('min', new Date().toISOString().split("T")[0]);
+    </script>
 </html>
